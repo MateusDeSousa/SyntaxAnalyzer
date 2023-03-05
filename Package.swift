@@ -17,6 +17,7 @@ let package = Package(
 			name: "SyntaxAnalyzer",
 			dependencies: [
 				.product(name: "SwiftSyntax", package: "swift-syntax"),
+				.product(name: "SwiftSyntaxParser", package: "swift-syntax"),
 				.product(name: "ArgumentParser", package: "swift-argument-parser"),
 			],
 			path: "Sources"),

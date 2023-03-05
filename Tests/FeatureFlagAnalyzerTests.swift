@@ -1,5 +1,5 @@
 import XCTest
-@testable import FeatureFlagAnalyzer
+@testable import SyntaxAnalyzer
 
 final class FeatureFlagAnalyzerTests: XCTestCase {
     func testExample() throws {

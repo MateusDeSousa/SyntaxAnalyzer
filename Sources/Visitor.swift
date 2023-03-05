@@ -15,6 +15,12 @@ final public class Visitor: SyntaxVisitor {
 	}
 	
 	private func process(identifier: TokenSyntax, inheritances: TypeInheritanceClauseSyntax?) {
-		
+		let id = identifier.description
+		let conformances = inheritances?.inheritedTypeCollection.compactMap({ inheritedTypeSyntax in
+			inheritedTypeSyntax.description
+		}) ?? []
+		if conformances.contains(desiredProtocol) {
+			self.conformances.append(id)
+		}
 	}
 }
